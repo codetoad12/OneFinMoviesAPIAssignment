@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "2fc42e16-dfac-4f9e-ab96-2b038269828d",
+		"name": "Movies_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24122150"
+	},
+	"item": [
+		{
+			"name": "GetCollection",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0MjA3NTY2LCJqdGkiOiJkN2Q0YjlmNjBjN2Q0OTY0YTMyZmIwOWNjYTY0NjU5YSIsInVzZXJfaWQiOjJ9.uhFuR01dPDH59X2s79Y664T5JaY2sbsSkJuy5r4olhM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"My Favorite Romantic Movies\",\r\n    \"description\": \"A collection of my favorite romantic movies\",\r\n    \"movies\": [\r\n        {\r\n            \"title\":\"The Notebook\",\r\n            \"description\": \"A romantic drama film directed by Nick Cassavetes\",\r\n            \"genres\": \"romance,drama\",\r\n            \"uuid\":\"586455dc-8c6e-494e-b408-d6c922249137\"\r\n        },\r\n        {\r\n            \"title\":\"Titanic\",\r\n            \"description\": \"A romantic epic film directed by James Cameron\",\r\n            \"genres\": \"romance,drama\",\r\n            \"uuid\":\"586455dc-8c6e-494e-b408-d6c922249138\"\r\n        },\r\n        {\r\n            \"title\":\"The Fault in Our Stars\",\r\n            \"description\": \"A romantic drama film directed by Josh Boone\",\r\n            \"genres\": \"romance,drama\",\r\n            \"uuid\":\"586455dc-8c6e-494e-b408-d6c922249139\"\r\n        },\r\n        {\r\n            \"title\":\"Twilight\",\r\n            \"description\": \"A romantic fantasy film directed by Catherine Hardwicke\",\r\n            \"genres\": \"romance,fantasy\",\r\n            \"uuid\":\"586455dc-8c6e-494e-b408-d6c922249140\"\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/collection",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"collection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCollection",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0MjA3NTY2LCJqdGkiOiJkN2Q0YjlmNjBjN2Q0OTY0YTMyZmIwOWNjYTY0NjU5YSIsInVzZXJfaWQiOjJ9.uhFuR01dPDH59X2s79Y664T5JaY2sbsSkJuy5r4olhM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                    \"title\": \"My Favorite Action Movies\",\r\n                    \"description\": \"A collection of my favorite action movies\",\r\n                    \"movies\":[\r\n                            {\"title\":\"The Matrix\",\r\n                            \"description\": \"A science fiction action film directed by the Wachowskis\",\r\n                            \"genres\": \"action\",\r\n                            \"uuid\":\"1234-5678-abcd-efgh\"\r\n                            }\r\n                        ]\r\n                }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/collection/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"collection",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCollectionByID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0MjA3NTY2LCJqdGkiOiJkN2Q0YjlmNjBjN2Q0OTY0YTMyZmIwOWNjYTY0NjU5YSIsInVzZXJfaWQiOjJ9.uhFuR01dPDH59X2s79Y664T5JaY2sbsSkJuy5r4olhM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"My Favorite Action Movies\",\r\n    \"description\": \"A collection of my favorite action movies\",\r\n    \"movies\": [\r\n        {\r\n            \"title\":\"The Matrix\",\r\n            \"description\": \"A science fiction action film directed by the Wachowskis\",\r\n            \"genres\": \"science fiction,action\",\r\n            \"uuid\":\"1234-5678-abcd-efgh\"\r\n        },\r\n        {\r\n            \"title\":\"Die Hard\",\r\n            \"description\": \"An action film directed by John McTiernan\",\r\n            \"genres\": \"action,thriller\",\r\n            \"uuid\":\"0987-6543-2109-8765\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/collection/f339b3dc-57dc-4784-bde9-478734294798/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"collection",
+						"f339b3dc-57dc-4784-bde9-478734294798",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCollection",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/collection/e6a217cb-2cf4-45c3-b832-1e9bb4048b5e/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"collection",
+						"e6a217cb-2cf4-45c3-b832-1e9bb4048b5e",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByCollectionID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/collection/f339b3dc-57dc-4784-bde9-478734294798/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"collection",
+						"f339b3dc-57dc-4784-bde9-478734294798",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMoviesAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/movies/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNextMovieListFromAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/movies/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRequestCount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/request-counter",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"request-counter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResetRequestCount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/request-counter/reset",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"request-counter",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"third_user\",\r\n    \"password\": \"Django1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"third_user\",\r\n    \"password\": \"Django1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/jwt/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"jwt",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3NDIwNzU2NiwianRpIjoiYTZmMGM5ZTdiNzQwNDdhYzhjODU3N2FjMmRmMzJmYzkiLCJ1c2VyX2lkIjoyfQ.xU54FfiSDjfgTV4Z7yuYTjaaZVvXGuZezjE5Dbo2yuc",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,7 @@
+import os
+username="iNd3jDMYRKsN1pjQPMRz2nrq7N99q4Tsp9EY9cM0"
+password='Ne5DoTQt7p8qrgkPdtenTK8zd6MorcCR5vXZIJNfJwvfafZfcOs4reyasVYddTyXCz9hcL5FGGIVxw3q02ibnBLhblivqQTp4BIC93LZHj4OppuHQUzwugcYu7TIC5H1'
+
+os.environ['MOVIE_API_USERNAME']=username
+os.environ['MOVIE_API_PASSWORD']=password
+
